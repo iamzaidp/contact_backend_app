@@ -1,18 +1,16 @@
 ---
 apiVersion: apps/v1
-kind: Deployment
-metadata: 
+kind: Deployment 
+metadata:
   name: backenddeployment
 spec:
-  strategy:
-    type: RollingUpdate
   replicas: 1
-  selector: 
+  selector:
     matchLabels:
       app: backendapp
-  template: 
-    metadata:
-      name: backendapppod
+  template:
+    metadata: 
+      name: backendpod
       labels:
         app: backendapp
     spec:
@@ -25,7 +23,7 @@ spec:
 ---
 apiVersion: v1
 kind: Service
-metadata:
+metadata: 
   name: backendsvc
 spec:
   type: LoadBalancer
@@ -33,5 +31,6 @@ spec:
     app: backendapp
   ports:
   - port: 80
-    targetPort: 8080
+    targetPort: 8080  
 ...
+
