@@ -16,7 +16,7 @@ spec:
   spec:
     containers:
     - name: contactbackendcontainer
-      image: zaidp//backendimage
+      image: zaidp/backendimage
       ports:
       - containerPort: 8080
 ---
